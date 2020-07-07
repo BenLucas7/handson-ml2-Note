@@ -111,7 +111,7 @@
     ```python
     # s : The radius of each circle
     # c : the color
-    # cmap : predefined color map called jest, which ranges from blue(low value) to red(high prices)
+    # cmap : predefined color map called jet, which ranges from blue(low value) to red(high prices)
     housing.plot(kind="scatter", x="longitude", y="latitude", alpha=0.4, s=housing["population"]/100, label="population", figsize=(10,7), c="median_house_value", cmap=plt.get_cmap("jet"), colorbar=True,) 
     plt.legend() 
     ```
