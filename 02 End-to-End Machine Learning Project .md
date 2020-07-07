@@ -1,6 +1,6 @@
-#### Chapter 2 End-to-End Machine Learning Project 
+## Chapter 2 End-to-End Machine Learning Project 
 
-* ##### Basic Concept
+* ### Basic Concept
 
   * A sequence of **data processing components** is called a data *pipeline*. 
 
@@ -18,7 +18,7 @@
 
       
 
-* ##### Download the Data
+* ### Download the Data
 
   * set the path using `os`
 
@@ -62,7 +62,7 @@
 
       
 
-* ##### Create a Test Set
+* ### Create a Test Set
 
   * use random methods to split the dataset is unstable. Over time, you  algorithms will get to see the whole dataset, which should be avoided. 
 
@@ -102,7 +102,7 @@
 
 
 
-* ##### Visualizing Geographical Data 
+* ### Visualizing Geographical Data 
 
   * **`DataFrame` has bulit-in plot function!**
 
@@ -120,7 +120,7 @@
 
 
 
-* ##### Looking for Correlations 
+* ### Looking for Correlations 
 
   * use `df.corr()` to compute the *[Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)* (**linear correlation**). 
 
@@ -134,25 +134,23 @@
 
 
 
-* ##### Experimenting with Attribute Combinations
+* ### Experimenting with Attribute Combinations
 
   ```python
   housing["rooms_per_household"] = housing["total_rooms"]/housing["households"] 
-  
   housing["bedrooms_per_room"] = housing["total_bedrooms"]/housing["total_rooms"] 
-  
   housing["population_per_household"]=housing["population"]/housing["households"]
   ```
 
 
 
-* ##### Prepare the Data for Machine Learning Algorithms 
+* ### Prepare the Data for Machine Learning Algorithms 
 
   * separate the features and the label.
 
 
 
-* ##### Data Cleaning
+* ### Data Cleaning
 
   * cope with missing features 
 
@@ -193,7 +191,7 @@
 
 
 
-* ##### Scikit-Learn Design
+* ### Scikit-Learn Design
 
   |             | description                                                  | input                                                        | function                                                     |
   | ----------- | :----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -203,7 +201,7 @@
 
 
 
-* ##### Handling Text and Categorical Attributes 
+* ### Handling Text and Categorical Attributes 
 
   * **Ordinal Encoding**: use `OrdinalEncoder` to convert the categories from text to numbers. 
 
@@ -223,7 +221,7 @@
 
 
 
-* ##### Custom Transformers 
+* ### Custom Transformers 
 
   ```python
   from sklearn.base import BaseEstimator, TransformerMixin
@@ -243,7 +241,7 @@
 
 
 
-* ##### Feature Scaling
+* ### Feature Scaling
 
   |           |                       Min-max scaling                        |          Standardization          |
   | :-------: | :----------------------------------------------------------: | :-------------------------------: |
@@ -256,7 +254,7 @@
 
 
 
-* ##### Transformation Pipelines 
+* ### Transformation Pipelines 
 
   * The Pipeline constructor takes a list of `(name,estimator)` pairs defining a sequence of steps.  
 
@@ -296,7 +294,7 @@
 
 
 
-* ##### Better Evaluation Using Cross-Validation 
+* ### Better Evaluation Using Cross-Validation 
   * `cross_val_score()` Scikit-Learn’s *K-fold cross-validation*. 
 
     ```python
@@ -313,7 +311,7 @@
 
 
 
-* ##### Fine-Tune Your Model 
+* ### Fine-Tune Your Model 
 
   * **Grid Search** (where the parameters are discrete)
 
@@ -359,6 +357,6 @@
 
     
 
-* ##### Evaluate Your System on the Test Set 
+* ### Evaluate Your System on the Test Set 
 
   * run your `full_pipeline` to transform the data, **call `transform()`, *not* `fit_transform()`— you do not want to fit the test set!**
